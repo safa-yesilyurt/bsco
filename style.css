@@ -1,0 +1,272 @@
+body {
+  --heading-font: "Marcellus", Roboto, sans-serif;
+  --heading-font-weight: 400;
+  --heading-color: #111;
+  --heading-line-height: 1.24;
+
+  /* bootstrap */
+  --bs-body-font-family: "Jost", Roboto, sans-serif;
+  --bs-body-font-size: 18px;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #8f8f8f;
+  --bs-body-color-rgb: 143, 143, 143;
+
+  --bs-primary: #8C907E;
+  --bs-secondary: #6c757d;
+  --bs-black: #111;
+  --bs-light: #F1F1F0;
+  --bs-dark: #212529;
+
+  --bs-primary-rgb: 140, 144, 126;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-black-rgb: 17, 17, 17;
+  --bs-light-rgb: 241, 241, 240;
+  --bs-dark-rgb: 33, 37, 41;
+
+  --bs-link-color: #111;
+  --bs-link-color-rgb: 17, 17, 17;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: #111;
+  --bs-link-hover-color-rgb: 17, 17, 17;
+}
+
+body {
+  letter-spacing: 0.03rem;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  line-height: var(--heading-line-height);
+}
+
+h1, h2, h3 {
+  margin: 25px 0;
+}
+
+h5, h6 {
+  letter-spacing: 1px;
+}
+
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3.6rem; }
+h3 { font-size: 2.8rem; }
+h5 { font-size: 1.4rem; }
+h6 { font-size: 1rem; }
+
+a { text-decoration: none; }
+
+/* container fluid */
+.container-fluid {
+  max-width: 1800px;
+}
+
+/* btn */
+.btn {
+  --bs-btn-border-radius: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #8C907E;
+  --bs-btn-border-color: #8C907E;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #5e624e;
+  --bs-btn-hover-border-color: #5e624e;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #5e624e;
+  --bs-btn-active-border-color: #5e624e;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #8C907E;
+  --bs-btn-disabled-border-color: #8C907E;
+}
+
+/* text white */
+.text-white {
+  --heading-color: var(--bs-light);
+}
+
+/* navbar */
+.navbar.fixed-top {
+  transition: background-color 0.6s ease-out;
+}
+
+/* form control */
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, .25);
+}
+/* Text Effects (kullanılmıyor, kaldırıldı) */
+/* Search Popup (HTML’de yok, kaldırıldı) */
+/* Swiper Slide Arrows (HTML’de yok, kaldırıldı) */
+
+/* Sadece swipe-up değişkeni kaldı çünkü başka yerde kullanılabilir */
+.swipe-up {
+  --delay: 0.05s;
+  animation-delay: 1s;
+}
+/* Image Holder */
+.image-holder {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* Border Hover Effects */
+.border-animation a,
+.border-animation a:after,
+.border-animation a:before {
+  transition: all .5s;
+}
+
+.border-animation a {
+  position: relative;
+}
+
+.border-animation a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: '.';
+  color: transparent;
+  background: var(--bs-primary);
+  height: 2px;
+}
+
+.border-animation a:hover:after {
+  width: 100%;
+}
+
+.border-animation-left .item-anchor {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.border-animation-left .item-anchor:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  background: var(--bs-dark);
+  transition: all 0.5s ease;
+}
+
+.border-animation-left .item-anchor:hover:after,
+.border-animation-left .item-anchor:focus:after {
+  width: 100%;
+}
+
+/* Instagram */
+.instagram .insta-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.instagram .insta-item a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.6s ease-out;
+}
+
+
+/* button link */
+.btn-link {
+  font-size: 0.875rem;
+  font-family: var(--bs-body-font-family);
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a.btn-link,
+a.btn-link:after {
+  transition: all .5s;
+}
+
+a.btn-link {
+  position: relative;
+}
+
+a.btn-link:before,
+a.btn-link:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: var(--bs-dark);
+  height: 1px;
+}
+
+[data-bs-theme=dark] a.btn-link:after {
+  background-color: var(--bs-white);
+}
+
+a.btn-link:before {
+  background-color: var(--bs-gray);
+  width: 100%;
+}
+
+a.btn-link.is-checked:after,
+a.btn-link:hover:after {
+  width: 100%;
+}
+
+a.btn-link.text-white:after {
+  background-color: var(--bs-white);
+}
+
+a.btn-link.text-light:after {
+  background-color: var(--bs-light);
+}
+
+/* Menü linkleri için border hover efekti */
+.border-animation-left .item-anchor a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px; /* alt çizgi için boşluk */
+  color: var(--bs-black); /* varsayılan renk */
+  text-decoration: none;
+}
+
+.border-animation-left .item-anchor a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: var(--bs-primary);
+  transition: width 0.3s ease;
+}
+
+.border-animation-left .item-anchor a:hover:after {
+  width: 100%;
+}
+
+.navbar a,
+.footer-menu a {
+  color: var(--bs-black);
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.footer-menu a:hover {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
